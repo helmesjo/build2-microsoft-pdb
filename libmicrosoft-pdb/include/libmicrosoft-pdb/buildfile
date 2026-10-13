@@ -1,0 +1,28 @@
+intf_libs = # Interface dependencies.
+#import xxxx_libs += libhello%lib{hello}
+
+lib{microsoft-pdb}: hxx{**} $intf_libs
+
+# Build options.
+#
+out_pfx = [dir_path] $out_root/include/
+src_pfx = [dir_path] $src_root/include/
+
+cxx.poptions =+ "-I$out_pfx" "-I$src_pfx"
+
+# Export options.
+#
+lib{microsoft-pdb}:
+{
+  cxx.export.poptions = "-I$out_pfx" "-I$src_pfx"
+  cxx.export.libs = $intf_libs
+}
+
+# Install into the libmicrosoft-pdb/ subdirectory of, say, /usr/include/
+# recreating subdirectories.
+#
+hxx{*}:
+{
+  install         = include/libmicrosoft-pdb/
+  install.subdirs = true
+}

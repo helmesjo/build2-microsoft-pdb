@@ -1,0 +1,3 @@
+import libs = libmicrosoft-pdb%lib{microsoft-pdb}
+
+exe{driver}: {hxx cxx}{**} $libs testscript{**}

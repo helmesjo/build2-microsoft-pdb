@@ -1,0 +1,6 @@
+$out_root/
+{
+  include include/libmicrosoft-pdb/
+}
+
+export $out_root/include/libmicrosoft-pdb/$import.target

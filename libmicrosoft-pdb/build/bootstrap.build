@@ -1,0 +1,7 @@
+project = libmicrosoft-pdb
+
+using version
+using config
+using test
+using install
+using dist
