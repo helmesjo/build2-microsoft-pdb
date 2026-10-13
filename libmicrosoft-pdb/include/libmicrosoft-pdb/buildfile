@@ -18,6 +18,13 @@ lib{microsoft-pdb}:
   cxx.export.libs = $intf_libs
 }
 
+# Upstream cvinfo.h and pdb.h include vcver.h unless _VC_VER_INC is defined.
+# This Microsoft-internal header is not part of upstream, so skip it unless
+# the compiler provides one.
+#
+if $null($cxx.find_system_header(vcver.h))
+  lib{microsoft-pdb}: cxx.export.poptions += -D_VC_VER_INC
+
 # Install into the libmicrosoft-pdb/ subdirectory of, say, /usr/include/
 # recreating subdirectories.
 #
