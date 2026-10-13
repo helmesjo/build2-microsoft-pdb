@@ -1,16 +1,17 @@
 : 1
 name: libmicrosoft-pdb
-version: 0.1.0-a.0.z
+version: 2023.4.27-a.0.z
+upstream-version: 20230427
 type: lib,binless
 language: c++
-project: build2-microsoft-pdb
-summary: microsoft-pdb C++ library
+project: microsoft-pdb
+summary: Microsoft PDB and CodeView debug information C++ headers
+topics: pdb, codeview, debug information, microsoft
 license: MIT ; MIT License.
 description-file: README.md
 package-description-file: PACKAGE-README.md
-url: https://example.org/upstream
-email: upstream@example.org
-package-url: https://github.com/build2-packaging/build2-microsoft-pdb
+url: https://github.com/microsoft/microsoft-pdb
+package-url: https://github.com/build2-packaging/microsoft-pdb
 package-email: packaging@build2.org ; Mailing list.
 depends: * build2 >= 0.18.0
 depends: * bpkg >= 0.18.0
