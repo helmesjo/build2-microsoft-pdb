@@ -1,0 +1,1 @@
+../../upstream/docs/ExternalResources.md
